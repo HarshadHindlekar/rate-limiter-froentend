@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import SendSmsForm from './Components/SendSmsForm';
+import UsageStatistics from './Components/UsageStatistics';
+import RateLimitViolations from './Components/RateLimitViolations';
+import { useState } from 'react';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-screen h-screen p-4 flex flex-col justify-center items-center">
+      <h1 className="text-2xl font-bold mb-4">SMS API Dashboard</h1>
+      <div className='flex flex-row h-full gap-2'>
+        <SendSmsForm />
+        <UsageStatistics />
+        <RateLimitViolations />
+
+      </div>
+
     </div>
   );
 }
